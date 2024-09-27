@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-2.1.4.js"></script>
+  <!-- Custom JS & CSS -->
+  <script src="custom.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <title>portpolio information</title>
+</head>
+<body>
+  <div class="container">
+    <div id="header"></div>
+    <div class="info-inner">
+      <div class="project-desc">
+        <h3>BBC-English 반응형 홈페이지</h3>
+        <strong>🩵About <span>BBC-English</span></strong>
+        <div class="project-about">
+          <img src="images/logo-bbc.png" alt="">
+          <ul>
+            <li>작업기간 : 10일</li>
+            <li>작업인원 : 3인 (팀장)</li>
+            <li>참여요율 : main (100%) / 공지사항 게시판</li>
+            <li>사용언어 : html · css · jQuery · javaScript</li>
+            <li>참고사항 : 메인페이지1, 서브페이지7</li>
+          </ul>
+        </div>
+        <p>
+          <i class="xi-angle-right-thin"></i>기존 BBC사이트를 한국인 전용 사이트로 만들어 한국유저가 접근하기 쉽게 리뉴얼 했습니다.
+        </p>
+        <a class="btn" href='https://jaehan-bae.github.io/bbcEnglish/' target="_blank">사이트 바로가기</a>
+      </div>
+      <div class="frs">
+        <h1>✔️BBC ENG WIREFRAME</h1>
+        <img src="./images/bbc/BBC_wireframe_1.jpg" alt="">
+        <img src="./images/bbc/BBC_wireframe_2.jpg" alt="">
+        <img src="./images/bbc/BBC_wireframe_3.jpg" alt="">
+        <img src="./images/bbc/BBC_wireframe_4.jpg" alt="">
+        <img src="./images/bbc/BBC_wireframe_5.jpg" alt="">
+        <img src="./images/bbc/BBC_wireframe_6.jpg" alt="">
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+  <script>
+    $(function() {
+      $('#header').load('header.html');
+      $('#footer').load('footer.html');
+    })
+  </script>
+</body>
+</html>

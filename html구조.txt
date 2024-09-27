@@ -1,0 +1,25 @@
+header
+  .header-inner
+    .logo > img
+    .gnb
+      .menu > a*6
+      .slogan
+
+.welcome-inner
+  .welcome-text > h2
+  .opacity-image
+  .home-heading > span*3
+
+.about-inner
+  .about-heading
+  .about-desc
+  .about-skill
+
+.about-inner
+  .about-profile
+    .about-img > img
+    .about-contact
+      h2, span
+  .about-skill
+    .about-desc
+      h2, span

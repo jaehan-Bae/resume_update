@@ -1,0 +1,712 @@
+/* Google Web Font : Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+/* Google Web Font : Noto+Sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* XEION CDN */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* Recet Css */
+* {box-sizing: border-box;}
+ul {list-style: none; padding: 0; margin: 0;}
+a {text-decoration: none; color: #222;}
+h1, h2, h3, h4, h5 {margin: 0;}
+
+/* Default Css */
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* Entire laycout */
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  position: relative;
+}
+.content {
+  background-color: #ddd;
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+header.active {
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.117);
+  z-index: 100;
+}
+.gnb-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin: auto;
+  height: 60px;
+}
+.logo img {
+  width: 150px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.menu > a {}
+.slogan {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* ################# Section: Welcome ################# */
+.welcome-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.welcome-inner:before {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: overlay 1s 2s ease both;
+}
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  line-height: 1.6em;
+  font-weight: 300;
+  font-family: 'Source Sans Pro' sans-serif;
+  animation: slideup 2s linear;
+  animation-fill-mode: both;
+}
+.welcome-text span {
+  display: block;
+  font-size: 40px;
+}
+.welcome-text span .fa {
+  color: rgb(193, 4, 4);
+}
+.opacity-image {
+  background: url(images/main_bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0;
+  animation: opacity-image 1s 2.5s ease-in both;
+}
+.opacity-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #22222278;
+  left: 0;
+}
+.home-heading {
+  position: absolute;
+  top: 60%;
+  left: 200px;
+  transform: translateY(-20%);
+}
+.home-heading span {
+  color: #fff;
+  display: block;
+  font-size: 80px;
+  font-weight: 600;
+  width: 0;
+  overflow: hidden;
+  animation: reveal 1s ease-in-out 3s both;
+  white-space: nowrap;
+}
+.home-heading span:nth-child(1) {
+  animation-delay: 3s;
+}
+.home-heading span:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.home-heading span:nth-child(3) {
+  animation-delay: 3.4s;
+}
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes opacity-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* ################# Section: About ################# */
+.about-inner {
+  height: 100%;
+}
+.about-inner > div {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.about-info {
+  width: 40%;
+  background: #192F60;
+  color: #fff;
+}
+.about-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  text-align: center;
+}
+.about-heading {}
+.about-line {
+  width: 50px;
+  height: 4px;
+  border: none;
+  margin: 30px auto;
+  background-color: crimson;
+}
+.about-heading h3 {
+  font-size: 110px;
+  margin-bottom: 10px;
+}
+.about-heading span {
+  font-size: 24px;
+}
+.about-desc {
+  color: #c2c2c2;
+  line-height: 1.6em;
+}
+.about-desc li {}
+.about-skill {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+}
+.skill-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 63%;
+}
+.skill-item {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.skill-item:hover h3 {
+  color: tomato;
+  transition: .3s;
+  letter-spacing: 1.5px;
+}
+.skill-items:hover img {
+  filter: saturate(0);
+}
+.skill-item img:hover {
+  filter: saturate(1);
+}
+.skill-item img {
+  width: 70px;
+  float: left;
+  margin-right: 30px;
+}
+
+.skill-item p {
+  line-height: 1.6em;
+}
+/* ################# Section: Portpolio ################# */
+.portpolio-inner {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.portpolio-title {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portpolio-title h1 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+.portpolio-title > .about-line {
+  background-color: #192F60;
+}
+.portpolio-title p {
+  margin: 0;
+}
+.gallery {
+  display: flex;
+  flex: 1 0 70%;
+}
+.gallery a {
+  border-right: 3px solid #fbf2f2df;
+  flex: 1;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+}
+.gallery a:last-child {
+  border-right: none;
+}
+.gallery a:nth-child(1) {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.gallery a:nth-child(2) {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.gallery a:nth-child(3) {
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+}
+.gallery a:nth-child(4) {
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+}
+.gallery a:nth-child(5) {
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+}
+.gallery a:nth-child(6) {
+  background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+}
+.gallery a:nth-child(7) {
+  background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+}
+
+.gallery a:nth-child(1):hover {
+  background: url(images/portpolio-1.png) no-repeat center center;
+}
+.gallery a:nth-child(2):hover {
+  background: url(images/portpolio-2.png) no-repeat center center;
+}
+.gallery a:nth-child(3):hover {
+  background: url(images/portpolio-3.png) no-repeat center center;
+}
+.gallery a:nth-child(4):hover {
+  background: url(images/portpolio-4.png) no-repeat center center;
+}
+.gallery a:nth-child(5):hover {
+  background: url(images/portpolio-5.png) no-repeat center center;
+}
+.gallery a:nth-child(6):hover {
+  background: url(images/portpolio-6.png) no-repeat center center;
+}
+.gallery a:nth-child(7):hover {
+  background: url(images/portpolio-7.png) no-repeat center center;
+}
+.gallery:hover a {
+  flex: 1;
+  filter: grayscale(1);
+}
+.gallery a:hover {
+  flex: 7;
+  filter: grayscale(0);
+}
+.contents {
+  position: absolute;
+  /* width: 100%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+  height: 200px;
+  transition: .5s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contents h2 {
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+}
+.gallery a:hover .contents {
+  bottom: 0px;
+  transition-delay: .3s;
+}
+
+/* ################# Section: Toy ################# */
+.toy-inner {
+  height: 100%;
+  background-color: #fff;
+}
+.works {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  height: 90%;
+  text-align: center;
+}
+.work {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2%;
+  height: 30%;
+  width: 15%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  transition: .35s;
+  background-size: 90%;
+  overflow: hidden;
+}
+.work:nth-child(1) {
+  background: no-repeat center/90% url('images/toy/toy_thum1.png');
+}
+.work:nth-child(2) {
+  background: no-repeat center/90% url('images/toy/toy_thum2.png');
+}
+.work:nth-child(3) {
+  background: no-repeat center/80% url('images/toy/toy_thum3.png');
+}
+.work:nth-child(4) {
+  background: no-repeat center/100% url('images/toy/toy_thum4.png');
+}
+.work:nth-child(5) {
+  background: no-repeat center/100% url('images/toy/toy_thum5.png');
+}
+.work:nth-child(6) {
+  background: no-repeat center/100% url('images/toy/toy_thum6.png');
+}
+.work:nth-child(7) {
+  background: no-repeat center/100% url('images/toy/toy_thum7.png');
+}
+.work:nth-child(8) {
+  background: no-repeat center/95% url('images/toy/toy_thum8.png');
+}
+.work:nth-child(9) {
+  background: no-repeat center/100% url('images/toy/toy_thum9.png');
+}
+.work:nth-child(10) {
+  background: no-repeat center/90% url('images/toy/toy_thum10.png');
+}
+.work:nth-child(11) {
+  background: no-repeat center/90% url('images/toy/toy_thum11.png');
+}
+.work:nth-child(12) {
+  background: no-repeat center/80% url('images/toy/toy_thum12.png');
+}
+.work:nth-child(13) {
+  background: no-repeat center/120% url('images/toy/toy_thum13.png');
+}
+.work:nth-child(14) {
+  background: no-repeat center/100% url('images/toy/toy_thum14.png');
+}
+.work:nth-child(15) {
+  background: no-repeat center/100% url('images/toy/toy_thum15.png');
+}
+.work:nth-child(16) {
+  background: no-repeat center/100% url('images/toy/toy_thum16.png');
+}
+.work:nth-child(17) {
+  background: no-repeat center/100% url('images/toy/toy_thum17.png');
+}
+.work:nth-child(18) {
+  background: no-repeat center/100% url('images/toy/toy_thum18.png');
+}
+.work:hover {
+  background-size: 110%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+}
+
+/* ################# Section: Contact ################# */
+.contact-inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+.contact-inner > div {
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+.profile {
+  background-color: rgba(205, 255, 238, 0.244);
+  position: relative;
+}
+.profile > span {
+  position: absolute;
+  background-color: #dcedf2;
+  z-index: -1;
+  width: 500px;
+  height: 700px;
+  border: 1px solid red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.profile-image img {
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid #0000005f;
+}
+.profile-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.profile-title span {
+  font-size: 20px;
+}
+.profile-desc {
+  padding: 40px;
+}
+.profile-desc ul {
+  color: rgb(77, 77, 77);
+}
+.profile-desc li {
+  font-size: 18px;
+}
+.certificate, .education {
+  display: flex;
+  margin-left: 10%;
+}
+.education {
+  margin-top: 80px;
+}
+.certificate {
+  margin-top: 30px;
+}
+.list {
+  flex: 5;
+}
+.list li {
+  margin-bottom: 10px;
+}
+.title {
+  flex: 2;
+}
+.title p {
+  color: #ED6A31;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 192, 203, 0.059);
+}
+.contact h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.contact a {
+  font-size: 50px;
+  font-weight: 100;
+  position: relative;
+}
+.contact h3:nth-of-type(2) {
+  margin-top: 40px;
+}
+.contact:hover a {
+  opacity: .3;
+}
+.contact a:hover {
+  font-weight: bold;
+  opacity: 1;
+  animation: growShrink 3s infinite;
+}
+.contact a:hover:nth-of-type(1) {
+  color: #03C75A;
+}
+.contact a:hover:nth-of-type(2) {
+  color: #F1631B;
+}
+.contact a:hover:nth-of-type(3) {
+  color: #F8DF00;
+}
+.contact a:hover:nth-of-type(3) span {
+  color: #222;
+}
+.contact a:hover:nth-of-type(4) {
+  color: royalblue;
+}
+
+@keyframes growShrink {
+  0% {
+    transform: scale(1); /* 기본 크기 */
+  }
+  50% {
+    transform: scale(0.8); /* 커짐 */
+  }
+  100% {
+    transform: scale(1); /* 다시 원래 크기로 돌아옴 */
+  }
+}
+/* ################# Section: info ################# */
+header {
+  background-color: rgba(135, 207, 235, 0.292);
+}
+.info-inner {
+  width: 1600px;
+  margin: auto;
+}
+.info-inner h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+.project-desc {
+  padding-top: 100px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.project-desc strong {
+  color: #a5a5a5;
+  font-weight: 500;
+  display: block;
+}
+.project-desc span {
+  font-weight: bold;
+}
+.project-desc ul {
+  line-height: 30px;
+  color: #666666;
+}
+.project-about {
+  display: flex;
+  padding-top: 20px;
+}
+.project-about img {
+  border: 1px solid #192f6030;
+  padding: 20px;
+  width: 350px;
+}
+.project-about ul {
+  padding-left: 30px;
+}
+.frs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frs img {
+  width: 100%;
+}
+.frs h1 {
+  margin: 80px 0 30px 0;
+  font-weight: 500;
+  font-size: 40px;
+  color: #444;
+  padding-bottom: 20px;
+}
+.frs-gif img {
+  border: 1px solid #ddd;
+}
+.frs-imgs {
+  display: flex;
+}
+.frs-img {
+  flex: 3;
+}
+.frs-gif {
+  flex: 5;
+}
+.frs-img > img {
+  border: 1px solid #ddd;
+}
+.frs-gif > img {
+}
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #192F60;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  transition: .3s;
+}
+.btn:hover {
+  background-color: #3abeb3;
+}
+/* ########## Section: footer ########### */
+footer {
+  height: 10vh;
+  margin-top: 50px;
+  background-color: #214777;
+  text-align: center;
+}
+.footer-content {
+  color: #fff;
+  font-size: 12px;
+  padding-top: 13px;
+}

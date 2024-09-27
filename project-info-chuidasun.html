@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-2.1.4.js"></script>
+  <!-- Custom JS & CSS -->
+  <script src="custom.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <title>portpolio information</title>
+</head>
+<body>
+  <div class="container">
+    <div id="header"></div>
+    <div class="info-inner">
+      <div class="project-desc">
+        <h3>취다선 반응형 홈페이지</h3>
+        <strong>🩵About <span>Chuidasun</span></strong>
+        <div class="project-about">
+          <img src="images/logo-chuidasun.png" alt="">
+          <ul>
+            <li>작업기간 : 2주</li>
+            <li>작업인원 : 1인 (100%)</li>
+            <li>사용언어 : html · css · jQuery · javaScript</li>
+            <li>참고사항 : 서브페이지3, 메인페이지1</li>
+          </ul>
+        </div>
+        <p>
+          <i class="xi-angle-right-thin"></i>숙박, 쇼핑몰, 프로그램 안내가 결합된 취다선 호텔 사이트를 특정한 목적에 맞게 리뉴얼 했습니다. 취다선에서 유명한 요가, 명상, 티클래스 프로그램에 맞춘 정보를 직관적으로 제공받도록 제작했습니다.
+        </p>
+        <a class="btn" href='https://jaehan-bae.github.io/chuidasun/' target="_blank">사이트 바로가기</a>
+      </div>
+      <div class="frs">
+        <h1>✔️How to make this</h1>
+        <img src="./images/chuidasun/chuidasun_001.png" alt="">
+        <img src="./images/chuidasun/chuidasun_002.png" alt="">
+        <img src="./images/chuidasun/chuidasun_003.png" alt="">
+        <img src="./images/chuidasun/chuidasun_004.png" alt="">
+        <img src="./images/chuidasun/chuidasun_005.png" alt="">
+        <img src="./images/chuidasun/chuidasun_006.png" alt="">
+        <img src="./images/chuidasun/chuidasun_007.png" alt="">
+        <img src="./images/chuidasun/chuidasun_008.png" alt="">
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+  <script>
+    $(function() {
+      $('#header').load('header.html');
+      $('#footer').load('footer.html');
+    })
+  </script>
+</body>
+</html>

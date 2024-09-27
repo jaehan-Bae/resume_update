@@ -1,0 +1,9 @@
+.contact-inner
+  .profile
+    .profile-image
+      image, span, p
+    .education
+    .certificate
+  .contact
+    p > a*2
+    p > a*2
