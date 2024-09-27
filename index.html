@@ -21,7 +21,7 @@
 
 <body data-hijacking="on" data-animation="rotate">
   <div class="container">
-    <section class="cd-section visible">
+    <section class="cd-section">
       <div>
         <div class="content">
           <div class="welcome-inner">
@@ -39,7 +39,7 @@
         </div>
       </div>
     </section>
-    <section class="cd-section">
+    <section class="cd-section visible">
       <div>
         <div class="content">
           <div class="about-inner">
@@ -62,41 +62,78 @@
             <div class="about-skill">
               <div class="skill-items">
                 <div class="skill-item">
-                  <img src="images/logo/logo-figma-removebg-preview.png" alt="">
-                  <span>
-                    <h3>FIGMA</h3>
-                    <p>기능정의</p>
-                  </span>
+                  <div class="skill-title">
+                    <img src="images/logo/logo-figma-removebg-preview.png" alt="">
+                  </div>
+                  <div class="skill-desc">
+                    <span>
+                      <h3>FIGMA</h3>
+                      <p>
+                        웹, 모바일, 태블릿에 맞춘 레이아웃, 아트보드 제작<br>
+                        ui 컴포트넌트별 저장<br>
+                        라이브러리 제작 후 팀원과 공유 프로젝트 진행
+                      </p>
+                    </span>
+                  </div>
                 </div>
                 <div class="skill-item">
-                  <img src="images/logo/logo-html-removebg-preview.png" alt="">
-                  <span>
-                    <h3>HTML5</h3>
-                    <p>시멘틱태그, 부모-자식관계 이해도, 폼요소(input, select, form, button), 가상클래스, target 속성</p>
-                  </span>
+                  <div class="skill-title">
+                    <img src="images/logo/logo-html-removebg-preview.png" alt="">
+                  </div>
+                  <div class="skill-desc">
+                    <span>
+                      <h3>HTML5</h3>
+                      <p>
+                        시멘틱태그(header, footer, article, aside, nav, figcaption), 폼요소(input, select, form, button), label,
+                        data-속성, video
+                      </p>
+                    </span>
+                  </div>
                 </div>
                 <div class="skill-item">
-                  <img src="images/logo/logo-css-removebg-preview.png" alt="">
-                  <span>
-                    <h3>CSS3</h3>
-                    <p>미디어쿼리,배치(float, flex), keyframes애니메이션</p>
-                  </span>
+                  <div class="skill-title">
+                    <img src="images/logo/logo-css-removebg-preview.png" alt="">
+                  </div>
+                  <div class="skill-desc">
+                    <span>
+                      <h3>CSS3</h3>
+                      <p>
+                        배치(float, flex, position), hover, opacity, transform, before & after (가상 요소), overflow, display,
+                        input, gradient, nth-child (CSS 선택자), transition-delay, transform-origin, z-index, filter,
+                        background, placeholder, kframes animation, active, border-radius, target, 미디어쿼리, transition,
+                        box-shadow, 아이콘(fontawesome, xeicon), object-fit, visibility, line-height, letter-spacing,
+                        animation-fill-mode
+                      </p>
+                    </span>
+                  </div>
                 </div>
                 <div class="skill-item">
-                  <img src="images/logo/logo-jquery-removebg-preview.png" alt="">
-                  <span>
-                    <h3>JQUERY</h3>
-                    <p>동적 UI 구성, 이펙트(addClass/removeClass, fadeIn/Out .etc), 플러그인 활용, 요소 탐색 메서드 이해도(children,siblings),
-                      선택자(this)활용</p>
-                  </span>
+                  <div class="skill-title">
+                    <img src="images/logo/logo-jquery-removebg-preview.png" alt="">
+                  </div>
+                  <div class="skill-desc">
+                    <span>
+                      <h3>JQUERY</h3>
+                      <p>
+                        동적 UI 구성, 이펙트(addClass/removeClass, fadeIn/Out .etc), 플러그인 활용, 요소 탐색 메서드 이해도(children,siblings),
+                        선택자(this)활용
+                      </p>
+                    </span>
+                  </div>
                 </div>
                 <div class="skill-item">
-                  <img src="images/logo/logo-js-removebg-preview.png" alt="">
-                  <span>
-                    <h3>JAVASCRIPT</h3>
-                    <p>변수, 조건문, 반복문 등의 기본 문법 이해와 활용, getElementById, querySelector 등 DOM 선택자 사용한 요소 선택/조작, 클릭/마우스 이동
-                      이벤트처리</p>
-                  </span>
+                  <div class="skill-title">
+                    <img src="images/logo/logo-js-removebg-preview.png" alt="">
+                  </div>
+                  <div class="skill-desc">
+                    <span>
+                      <h3>JAVASCRIPT</h3>
+                      <p>
+                        변수, 조건문, 반복문 등의 기본 문법 이해와 활용, getElementById, querySelector 등 DOM 선택자 사용한 요소 선택/조작, 클릭/마우스 이동
+                        이벤트처리
+                      </p>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -277,7 +314,7 @@
     </ul>
   </nav>
   <script>
-    $(function() {
+    $(function () {
       $('#header').load('header.html');
     })
   </script>
