@@ -154,7 +154,7 @@ header.active {
 .home-heading span:nth-child(3) {
   animation-delay: 3.4s;
 }
-@keyframes slideup {
+ @keyframes slideup {
   0% {
     opacity: 0;
     margin-top: 50px;
@@ -297,12 +297,15 @@ header.active {
   align-items: center;
   justify-content: center;
 }
-.portpolio-title h1 {
+.portpolio-title h1,
+.toy-header h1 {
   font-size: 40px;
   font-weight: 900;
   letter-spacing: 5px;
+  text-align: center;
 }
-.portpolio-title > .about-line {
+.portpolio-title > .about-line,
+.toy-header > .about-line {
   background-color: #192F60;
 }
 .portpolio-title p {
@@ -396,18 +399,48 @@ header.active {
   transition-delay: .3s;
 }
 
-/* ################# Section: Toy ################# */
-.toy-inner {
+/* ################# Section: design ################# */
+.design-inner .work {
   height: 100%;
+  width: 22%;
+}
+.design-inner .work:nth-child(1) {
+  background: no-repeat center/100% url('images/design_thum1.png');
+}
+.design-inner .work:nth-child(2) {
+  background: no-repeat center/100% url('images/design_thum2.png');
+}
+.design-inner .work:nth-child(3) {
+  background: no-repeat center/100% url('images/design_thum3.png');
+}
+.design-inner .work:nth-child(4) {
+  background: no-repeat center/100% url('images/design_thum4.png');
+}
+
+/* ################# Section: Toy ################# */
+.toy-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.toy-header {
+  text-align: center;
+  padding: 30px;
+  height: 30%;
+}
+.toy-inner {
   background-color: #fff;
+  height: 80%;
 }
 .works {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 90%;
-  height: 90%;
+  height: 70%;
   text-align: center;
 }
 .work {
@@ -482,6 +515,67 @@ header.active {
   transform: scale(1);
 }
 
+/* ################# Section: carrer ################# */
+.carrer-inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrer-inner > div {
+  float: left;
+  height: 100%;
+}
+.carrer-info {
+  width: 25%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ebf8fd8e;
+}
+.carrer-title {
+  padding: 40px 0;
+  text-align: center;
+}
+.carrer-title h1 {
+  font-size: 24px;
+  color: #555;
+  color: #145281;
+}
+.carrer-title strong {
+  color: #516187;
+  font-size: 18px;
+}
+.carrer-about {
+  line-height: 3rem;
+}
+.carrer-about ul {
+  font-size: 18px;
+  color: #555;
+  font-weight: 300;
+}
+.carrer-about b {
+  font-weight: 500;
+}
+.career-images {
+  width: 70%;
+}
+.carrer-img {
+  height: 90vh;
+  width: 90%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.carrer-sub {
+  color: gray;
+}
+
+
 /* ################# Section: Contact ################# */
 .contact-inner {
   height: 100%;
@@ -516,9 +610,11 @@ header.active {
   margin-top: 50px;
 }
 .profile-image img {
-  width: 250px;
+  width: 180px;
+  height: auto;
   border-radius: 20px;
-  border: 1px solid #0000005f;
+  border: 1px solid #5e57025f;
+  box-shadow: -10px 4px -10px 10px  #555555
 }
 .profile-title {
   font-size: 30px;
@@ -541,7 +637,7 @@ header.active {
   margin-left: 10%;
 }
 .education {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .certificate {
   margin-top: 30px;

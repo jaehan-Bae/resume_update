@@ -15,3 +15,4 @@
     var newWindow = window.open(url, '', 'width=' + width + ', height=' + height + ', top=' + topPos + ', left=' + leftPos);
     return false;
   }
+
