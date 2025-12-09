@@ -48,10 +48,18 @@ body {
 /* Header */
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 header.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.117);
   z-index: 100;
@@ -63,7 +71,7 @@ header.active {
   width: calc(100% - 40px);
   margin: auto;
   height: 60px;
-}
+  }
 .logo img {
   width: 150px;
 }
@@ -257,7 +265,7 @@ header.active {
   width: 63%;
 }
 .skill-item {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   overflow: hidden;
   display: flex;
 }
@@ -585,7 +593,7 @@ header.active {
 }
 .contact-inner > div {
   float: left;
-  width: 40%;
+  width: 50%;
   height: 100%;
 }
 .profile {
@@ -603,18 +611,68 @@ header.active {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.comment {
+  line-height: 3rem;
+}
+.orange,
+.pro-subt span {
+  font-weight: 500;
+}
+.orange, 
+.comment strong,
+.pro-subt span {
+  color: #ED6A31;
+}
+.pro-subt {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.deb::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ED6A31;
+  opacity: 0.3;
+  height: 50%;
+  width: 45%;
+}
 .profile-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 }
 .profile-image img {
-  width: 180px;
+  width: 300px;
   height: auto;
   border-radius: 20px;
   border: 1px solid #5e57025f;
   box-shadow: -10px 4px -10px 10px  #555555
+}
+.pro-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pro-subt {
+  text-align: center;
+  font-size: 32px;
+}
+.under-line {
+  border-bottom: 3px solid #ED6A31;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.under-line span {
+  }
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .profile-title {
   font-size: 30px;
@@ -659,7 +717,7 @@ header.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 192, 203, 0.059);
+  margin-top: 50px;
 }
 .contact h3 {
   font-weight: normal;
